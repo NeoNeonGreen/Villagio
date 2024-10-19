@@ -127,6 +127,11 @@ a li:hover {
     cursor: pointer;
 }
 
+.site-way{
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
 @media screen and (max-width: 1240px) {
     .container{
         width: 100%;
