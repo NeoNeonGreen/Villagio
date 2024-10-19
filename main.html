@@ -1,11 +1,660 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/multi.css">
+    <link rel="stylesheet" href="css/main.css">
     <title>Villagio</title>
 </head>
+
 <body>
-    
+    <header>
+        <div class="container flex">
+            <div class="header-top flex">
+                <a href="main.html" class="header__logo">
+                    <img src="img/header/logo.png" alt="">
+                </a>
+                <div class="header-right">
+                    <div class="header__phone flex">
+                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12.2935 5.25C13.1481 5.41674 13.9335 5.83473 14.5493 6.45044C15.165 7.06616 15.583 7.85161 15.7497 8.70625M12.2935 1.75C14.0691 1.94726 15.7248 2.7424 16.9889 4.00488C18.253 5.26736 19.0502 6.92213 19.2497 8.6975M8.94831 12.1302C7.89693 11.0788 7.06674 9.88999 6.45774 8.62158C6.40536 8.51247 6.37917 8.45792 6.35904 8.38889C6.28754 8.14358 6.3389 7.84235 6.48766 7.6346C6.52952 7.57614 6.57953 7.52613 6.67956 7.42611C6.98546 7.1202 7.13841 6.96725 7.23841 6.81344C7.61553 6.23341 7.61553 5.48566 7.23841 4.90563C7.13841 4.75182 6.98546 4.59887 6.67956 4.29296L6.50904 4.12245C6.04403 3.65744 5.81153 3.42493 5.56182 3.29863C5.0652 3.04745 4.47872 3.04745 3.9821 3.29863C3.7324 3.42494 3.49989 3.65744 3.03488 4.12245L2.89695 4.26038C2.43353 4.7238 2.20182 4.95551 2.02485 5.27054C1.82848 5.62011 1.68729 6.16304 1.68848 6.56398C1.68956 6.92531 1.75965 7.17226 1.89983 7.66615C2.65318 10.3204 4.07459 12.8249 6.16408 14.9144C8.25356 17.0039 10.7581 18.4253 13.4123 19.1787C13.9062 19.3188 14.1532 19.3889 14.5145 19.39C14.9155 19.3912 15.4584 19.25 15.808 19.0536C16.123 18.8767 16.3547 18.645 16.8181 18.1815L16.956 18.0436C17.4211 17.5786 17.6536 17.3461 17.7799 17.0964C18.031 16.5998 18.031 16.0133 17.7799 15.5167C17.6536 15.267 17.4211 15.0345 16.956 14.5695L16.7855 14.3989C16.4796 14.093 16.3267 13.9401 16.1729 13.8401C15.5928 13.463 14.8451 13.463 14.2651 13.8401C14.1112 13.9401 13.9583 14.093 13.6524 14.3989C13.5524 14.499 13.5024 14.549 13.4439 14.5908C13.2361 14.7396 12.9349 14.791 12.6896 14.7195C12.6206 14.6993 12.566 14.6731 12.4569 14.6208C11.1885 14.0118 9.99969 13.1816 8.94831 12.1302Z"
+                                stroke="#111111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                        +40 742 665 665
+                    </div>
+                    <div class="header__elements flex">
+                        <a href="#" class="header__element">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M13.992 5.99178C11.6595 3.2648 7.76974 2.53125 4.84718 5.02835C1.92463 7.52545 1.51317 11.7005 3.80827 14.6538C5.71649 17.1093 11.4914 22.2881 13.3842 23.9643C13.5959 24.1518 13.7018 24.2456 13.8253 24.2824C13.9331 24.3146 14.051 24.3146 14.1588 24.2824C14.2823 24.2456 14.3882 24.1518 14.5999 23.9643C16.4927 22.2881 22.2676 17.1093 24.1758 14.6538C26.4709 11.7005 26.1097 7.49918 23.1369 5.02835C20.1641 2.55752 16.3246 3.2648 13.992 5.99178Z"
+                                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <a href="#" class="header__element">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.0217 15.7617L17.99 20.405M17.9783 7.59504L10.0217 12.2384M24.5 5.83337C24.5 7.76637 22.933 9.33337 21 9.33337C19.067 9.33337 17.5 7.76637 17.5 5.83337C17.5 3.90038 19.067 2.33337 21 2.33337C22.933 2.33337 24.5 3.90038 24.5 5.83337ZM10.5 14C10.5 15.933 8.933 17.5 7 17.5C5.067 17.5 3.5 15.933 3.5 14C3.5 12.067 5.067 10.5 7 10.5C8.933 10.5 10.5 12.067 10.5 14ZM24.5 22.1667C24.5 24.0997 22.933 25.6667 21 25.6667C19.067 25.6667 17.5 24.0997 17.5 22.1667C17.5 20.2337 19.067 18.6667 21 18.6667C22.933 18.6667 24.5 20.2337 24.5 22.1667Z"
+                                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                    <button class="header__backcall">
+                        Solicitati un apel
+                    </button>
+                </div>
+            </div>
+            <div class="header-bottom flex">
+                <nav class="header__nav flex">
+                    <a href="" class="header__nav_item">Acasa</a>
+                    <a href="" class="header__nav_item">Catalog proiecte</a>
+                    <a href="" class="header__nav_item">Servicii</a>
+                    <a href="" class="header__nav_item">Finantare</a>
+                    <a href="" class="header__nav_item">Case executate</a>
+                    <a href="" class="header__nav_item">Despre Noi</a>
+                    <a href="" class="header__nav_item">Blog</a>
+                    <a href="" class="header__nav_item">Contact</a>
+                </nav>
+                <div class="header__socials flex">
+                    <a href="#" class="header__soc">
+                        <svg width="39" height="38" viewBox="0 0 39 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.5" y="0.5" width="38" height="37" rx="3.5" stroke="#494949" />
+                            <g clip-path="url(#clip0_245_580)">
+                                <path
+                                    d="M17.3284 21.5187L16.9947 25.9393C17.4721 25.9393 17.6789 25.7462 17.9268 25.5142L20.1651 23.4994L24.8031 26.6985C25.6537 27.145 26.253 26.9099 26.4825 25.9615L29.5268 12.5253L29.5277 12.5245C29.7975 11.3402 29.0729 10.8771 28.2442 11.1676L10.3496 17.6205C9.1283 18.067 9.14679 18.7082 10.142 18.9988L14.7169 20.3391L25.3436 14.0762C25.8437 13.7643 26.2984 13.9369 25.9244 14.2488L17.3284 21.5187Z"
+                                    fill="#494949" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_245_580">
+                                    <rect width="20.1724" height="19" fill="white" transform="translate(9.41382 9.5)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+
+                    </a>
+                    <a href="#" class="header__soc">
+                        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M37.5 19C37.5 29.2173 29.2173 37.5 19 37.5C16.5383 37.5 14.19 37.0195 12.0431 36.1475L11.9902 36.126C11.6188 35.9751 11.3723 35.8749 11.1604 35.8274C10.9577 35.782 10.7975 35.7643 10.5897 35.7642C10.3727 35.7642 10.1438 35.8024 9.80566 35.8588L9.76118 35.8662L2.25007 37.1181C1.84749 37.1852 1.57867 37.2295 1.37422 37.2449C1.17213 37.2602 1.09796 37.2405 1.06515 37.2264C0.934146 37.1702 0.829753 37.0659 0.773565 36.9349C0.759493 36.902 0.739808 36.8279 0.755062 36.6258C0.770495 36.4213 0.814812 36.1525 0.881909 35.7499L2.13376 28.2388L2.14116 28.1944C2.1976 27.8562 2.2358 27.6273 2.23577 27.4103C2.23574 27.2025 2.218 27.0423 2.17255 26.8396C2.12507 26.6277 2.0249 26.3812 1.87398 26.0098L1.8525 25.9569C0.980551 23.81 0.5 21.4617 0.5 19C0.5 8.78273 8.78273 0.5 19 0.5C29.2173 0.5 37.5 8.78273 37.5 19Z"
+                                stroke="#494949" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M24.6392 21.0514C25.025 21.2082 27.1642 22.2538 27.6025 22.4629C28.0409 22.672 28.3039 22.7591 28.4266 22.9508C28.5494 23.1425 28.5494 23.9964 28.1811 25.0071C27.8305 26.0178 26.0946 26.9413 25.2529 27.0633C24.4989 27.1679 23.5521 27.2202 22.5175 26.8891C21.8863 26.6974 21.0797 26.436 20.0452 25.9829C15.6967 24.1183 12.8386 19.7618 12.6282 19.4656L12.6247 19.4611C12.4014 19.1653 10.8572 17.1194 10.8572 15.0046C10.8572 12.8786 11.9794 11.833 12.3651 11.3974C12.7684 10.9617 13.2243 10.8572 13.5224 10.8572H14.3641C14.6271 10.8746 14.9953 10.77 15.346 11.6065C15.6967 12.4778 16.5734 14.6038 16.6786 14.8129C16.7838 15.022 16.8539 15.2659 16.7137 15.5622C16.5734 15.841 16.4857 16.0327 16.2753 16.2767C16.0649 16.5206 15.8194 16.8343 15.6265 17.026C15.3986 17.2525 15.1882 17.479 15.4337 17.9147C15.6967 18.3503 16.5559 19.7618 17.8534 20.912C19.5016 22.3757 20.9044 22.8462 21.3427 23.0554C21.7811 23.2819 22.0441 23.247 22.2896 22.9508C22.5351 22.672 23.3592 21.6961 23.6573 21.2605C23.9554 20.8423 24.2359 20.912 24.6392 21.0514Z"
+                                fill="#494949" />
+                        </svg>
+
+                    </a>
+                    <a href="#" class="header__soc">
+                        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.5" y="0.5" width="37" height="37" rx="3.5" stroke="#494949" />
+                            <path
+                                d="M26.9583 18.6725C27.2147 18.8156 27.2147 19.1844 26.9583 19.3275L15.2689 25.8514C15.0189 25.9909 14.7111 25.8102 14.7111 25.5239L14.7111 12.4761C14.7111 12.1898 15.0189 12.0091 15.2689 12.1486L26.9583 18.6725Z"
+                                fill="#494949" stroke="#494949" stroke-width="1.25" />
+                        </svg>
+
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero__title">CASE DIN LEMN</h1>
+                <div class="hero__descr">
+                    de la 15 000 EURO (TVA inclus)
+                </div>
+                <div class="hero__buttons flex">
+                    <button class="hero__btn_consult">
+                        Solicitati o constulatie
+                    </button>
+                    <button class="hero__btn_toproject">
+                        Proiect disponibile
+                    </button>
+                </div>
+                <div class="door-block flex">
+                    <div class="door-img">
+                        <img src="img/hero/дверь.jpg" alt="">
+                    </div>
+
+                    <span class="door-span">
+                        Usa intrare exterior CADOU<br>
+                        cu sistem Antiefractie si
+                        <a href="">alte cadouri</a>
+                    </span>
+                </div>
+                <div class="hero__blur flex">
+                    <div class="blur__item flex">
+                        <svg width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M27.4167 13.7084H31.9938C32.4728 13.7084 32.7123 13.7084 32.9377 13.7625C33.1375 13.8105 33.3285 13.8896 33.5037 13.997C33.7014 14.1181 33.8707 14.2874 34.2094 14.6261L42.1656 22.5823C42.5043 22.921 42.6737 23.0904 42.7948 23.288C42.9021 23.4632 42.9813 23.6542 43.0292 23.8541C43.0834 24.0794 43.0834 24.3189 43.0834 24.7979V30.3542C43.0834 31.2667 43.0834 31.7229 42.9343 32.0828C42.7355 32.5627 42.3543 32.9439 41.8744 33.1427C41.5146 33.2917 41.0583 33.2917 40.1459 33.2917M30.3542 33.2917H27.4167M27.4167 33.2917V14.1C27.4167 11.9065 27.4167 10.8097 26.9898 9.97191C26.6143 9.23494 26.0151 8.63577 25.2782 8.26027C24.4403 7.83337 23.3436 7.83337 21.15 7.83337H10.1834C7.98981 7.83337 6.89305 7.83337 6.05522 8.26027C5.31826 8.63577 4.71908 9.23494 4.34358 9.97191C3.91669 10.8097 3.91669 11.9065 3.91669 14.1V29.3751C3.91669 31.5382 5.67024 33.2917 7.83335 33.2917M27.4167 33.2917H19.5834M19.5834 33.2917C19.5834 36.5364 16.953 39.1667 13.7084 39.1667C10.4637 39.1667 7.83335 36.5364 7.83335 33.2917M19.5834 33.2917C19.5834 30.0471 16.953 27.4167 13.7084 27.4167C10.4637 27.4167 7.83335 30.0471 7.83335 33.2917M40.1459 34.2709C40.1459 36.9748 37.9539 39.1667 35.25 39.1667C32.5461 39.1667 30.3542 36.9748 30.3542 34.2709C30.3542 31.567 32.5461 29.3751 35.25 29.3751C37.9539 29.3751 40.1459 31.567 40.1459 34.2709Z"
+                                stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                        <div class="blur__text flex">
+                            <h5 class="blur__title">Livrare GRATUITĂ</h5>
+                            <div class="blur__descr">
+                                în raza judetului Brasov
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blur__item flex">
+                        <svg width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M41.125 41.125H9.00833C7.91156 41.125 7.36318 41.125 6.94427 40.9116C6.57578 40.7238 6.2762 40.4242 6.08845 40.0557C5.875 39.6368 5.875 39.0884 5.875 37.9917V5.875M41.125 29.375L30.4828 18.7328C30.095 18.345 29.9012 18.1512 29.6776 18.0785C29.4809 18.0146 29.2691 18.0146 29.0724 18.0785C28.8488 18.1512 28.655 18.345 28.2672 18.7328L24.6078 22.3922C24.22 22.78 24.0262 22.9738 23.8026 23.0465C23.6059 23.1104 23.3941 23.1104 23.1974 23.0465C22.9738 22.9738 22.78 22.78 22.3922 22.3922L13.7083 13.7083M41.125 29.375H33.2917M41.125 29.375V21.5417"
+                                stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+
+                        <div class="blur__text flex">
+                            <h5 class="blur__title">Preturi mai MICI</h5>
+                            <div class="blur__descr">
+                                datorită producției proprii
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blur__item flex">
+                        <svg width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M23.5 33.2917C23.5 38.6995 27.8839 43.0833 33.2917 43.0833C38.6995 43.0833 43.0833 38.6995 43.0833 33.2917C43.0833 27.8839 38.6995 23.5 33.2917 23.5C27.8839 23.5 23.5 27.8839 23.5 33.2917ZM23.5 33.2917C23.5 31.0869 24.2287 29.0524 25.4583 27.4157V9.79167M23.5 33.2917C23.5 34.908 23.8916 36.4328 24.5852 37.7765C22.9354 39.1701 19.1248 40.1458 14.6875 40.1458C8.73893 40.1458 3.91667 38.3923 3.91667 36.2292V9.79167M25.4583 9.79167C25.4583 11.9548 20.6361 13.7083 14.6875 13.7083C8.73893 13.7083 3.91667 11.9548 3.91667 9.79167M25.4583 9.79167C25.4583 7.62855 20.6361 5.875 14.6875 5.875C8.73893 5.875 3.91667 7.62855 3.91667 9.79167M3.91667 27.4167C3.91667 29.5798 8.73893 31.3333 14.6875 31.3333C18.9743 31.3333 22.6762 30.4227 24.4099 29.1043M25.4583 18.6042C25.4583 20.7673 20.6361 22.5208 14.6875 22.5208C8.73893 22.5208 3.91667 20.7673 3.91667 18.6042"
+                                stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+
+                        <div class="blur__text flex">
+                            <h5 class="blur__title">Achitatre FLEXIBILA</h5>
+                            <div class="blur__descr">
+                                avans minim si pret FIX
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blur__item flex">
+                        <svg width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M23.5 11.75V23.5L31.3333 27.4166M43.0833 23.5C43.0833 34.3155 34.3156 43.0833 23.5 43.0833C12.6844 43.0833 3.91666 34.3155 3.91666 23.5C3.91666 12.6844 12.6844 3.91663 23.5 3.91663C34.3156 3.91663 43.0833 12.6844 43.0833 23.5Z"
+                                stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+
+                        <div class="blur__text flex">
+                            <h5 class="blur__title">Livrare IN TERMEN</h5>
+                            <div class="blur__descr">
+                                sau achitam despagubiri
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="catalog">
+            <div class="container">
+                <h2 class="section-title catalog-title">
+                    <span class="blue-text">Catalog</span> proiecte
+                </h2>
+
+                <ul class="catalog__list list-reset flex">
+                    <li class="catalog__item flex">
+                        <div class="catalog__img">
+                            <img src="img/catalog.jpg" alt="">
+                        </div>
+                        <div class="catalog__content flex">
+                            <h4 class="catalog__item_title">
+                                Case Tip Ambar
+                            </h4>
+                            <button class="catalog__item_btn">
+                                Proiecte
+
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.25 12.75L12.75 5.25M12.75 5.25H5.25M12.75 5.25V12.75" stroke="white"
+                                        stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </button>
+                        </div>
+                        <span class="blue-span">
+                            Protectie auto
+                        </span>
+                    </li>
+                    <li class="catalog__item flex">
+                        <div class="catalog__img">
+                            <img src="img/catalog.jpg" alt="">
+                        </div>
+                        <div class="catalog__content flex">
+                            <h4 class="catalog__item_title">
+                                Case Tip Ambar
+                            </h4>
+                            <button class="catalog__item_btn">
+                                Proiecte
+
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.25 12.75L12.75 5.25M12.75 5.25H5.25M12.75 5.25V12.75" stroke="white"
+                                        stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </button>
+                        </div>
+                        <span class="blue-span">
+                            Protectie auto
+                        </span>
+                    </li>
+                    <li class="catalog__item flex">
+                        <div class="catalog__img">
+                            <img src="img/catalog.jpg" alt="">
+                        </div>
+                        <div class="catalog__content flex">
+                            <h4 class="catalog__item_title">
+                                Case Tip Ambar
+                            </h4>
+                            <button class="catalog__item_btn">
+                                Proiecte
+
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.25 12.75L12.75 5.25M12.75 5.25H5.25M12.75 5.25V12.75" stroke="white"
+                                        stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </button>
+                        </div>
+                        <span class="blue-span">
+                            Protectie auto
+                        </span>
+                    </li>
+                    <li class="catalog__item flex">
+                        <div class="catalog__img">
+                            <img src="img/catalog.jpg" alt="">
+                        </div>
+                        <div class="catalog__content flex">
+                            <h4 class="catalog__item_title">
+                                Case Tip Ambar
+                            </h4>
+                            <button class="catalog__item_btn">
+                                Proiecte
+
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.25 12.75L12.75 5.25M12.75 5.25H5.25M12.75 5.25V12.75" stroke="white"
+                                        stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </button>
+                        </div>
+                        <span class="blue-span">
+                            Protectie auto
+                        </span>
+                    </li>
+                    <li class="catalog__item flex">
+                        <div class="catalog__img">
+                            <img src="img/catalog.jpg" alt="">
+                        </div>
+                        <div class="catalog__content flex">
+                            <h4 class="catalog__item_title">
+                                Case Tip Ambar
+                            </h4>
+                            <button class="catalog__item_btn">
+                                Proiecte
+
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.25 12.75L12.75 5.25M12.75 5.25H5.25M12.75 5.25V12.75" stroke="white"
+                                        stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </button>
+                        </div>
+                        <span class="blue-span">
+                            Protectie auto
+                        </span>
+                    </li>
+                    <li class="catalog__item flex">
+                        <div class="catalog__img">
+                            <img src="img/catalog.jpg" alt="">
+                        </div>
+                        <div class="catalog__content flex">
+                            <h4 class="catalog__item_title">
+                                Case Tip Ambar
+                            </h4>
+                            <button class="catalog__item_btn">
+                                Proiecte
+
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.25 12.75L12.75 5.25M12.75 5.25H5.25M12.75 5.25V12.75" stroke="white"
+                                        stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </button>
+                        </div>
+                        <span class="blue-span">
+                            Protectie auto
+                        </span>
+                    </li>
+                    <li class="catalog__item flex">
+                        <div class="catalog__img">
+                            <img src="img/catalog.jpg" alt="">
+                        </div>
+                        <div class="catalog__content flex">
+                            <h4 class="catalog__item_title">
+                                Case Tip Ambar
+                            </h4>
+                            <button class="catalog__item_btn">
+                                Proiecte
+
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.25 12.75L12.75 5.25M12.75 5.25H5.25M12.75 5.25V12.75" stroke="white"
+                                        stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </button>
+                        </div>
+                        <span class="blue-span">
+                            Protectie auto
+                        </span>
+                    </li>
+                </ul>
+                <form action="" class="catalog__form">
+                    <button class="catalog__btn">Vezi tot catalogul de case</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="stages">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="blue-text">Cum</span> noi lucram?
+                </h2>
+
+                <div class="stages__block">
+                    <div class="stages__text_block stb1">
+                        <h4 class="stages__title">
+                            01 | Prima etapă
+                        </h4>
+                        <p class="stages__p">
+                            Alegem proiectul, executam documentatia tehnica si calculam devizul pe tot proiectul. Din
+                            acest moment aveti un manager personal care se ocupă de toate procesele necesare executării
+                            proiectului
+                        </p>
+                    </div>
+                    <div class="stages__text_block stb2">
+                        <h4 class="stages__title">
+                            02 | Semnarea contractului
+                        </h4>
+                        <p class="stages__p">
+                            În contractul prestări servicii de construcție casă avem incluse toate clauzele, preț,
+                            termen de construcție și detaliile de livrare/montare, la fel obligațiile si drepturile
+                            fiecărei părți semnatare
+                        </p>
+                    </div>
+                    <div class="stages__text_block stb3">
+                        <h4 class="stages__title">
+                            03 | Executarea lucrărilor
+                        </h4>
+                        <p class="stages__p">
+                            Demarea-ză lucrările de producție a casei în fabrică sau pe terenul Dvs, in conformitate cu
+                            proiectul ales, care corespunde tuturor cerințelor și preferințelor dumneavoastră
+                        </p>
+                    </div>
+                    <div class="stages__text_block stb4">
+                        <h4 class="stages__title">
+                            04 | Predarea constructieir
+                        </h4>
+                        <p class="stages__p">
+                            Predarea constructiei in baza proces verbal predare, documentatiei tehnice, plan instalatii
+                            si plan electrice. In dependenta de proiectul ales - la rosu sau cheie.
+                        </p>
+                    </div>
+                </div>
+
+                <form class="stages__form" action="">
+                    <button class="stages__btn">Vreau sa fiu contactat</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="contacts">
+            <div class="container">
+                <h2 class="section-title blue-text">Contacte</h2>
+
+                <div class="contacts__top_content flex">
+                    <div class="contacts__phone_container flex">
+                        <div class="contacts__phone_top flex">
+                            <svg width="33" height="33" viewBox="0 0 33 33" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19.3183 8.25C20.6613 8.51203 21.8956 9.16885 22.8631 10.1364C23.8307 11.104 24.4875 12.3382 24.7495 13.6813M19.3183 2.75C22.1085 3.05997 24.7105 4.30949 26.6969 6.29339C28.6833 8.27728 29.936 10.8776 30.2495 13.6675M14.0616 19.0617C12.4095 17.4096 11.1049 15.5414 10.1479 13.5482C10.0656 13.3767 10.0244 13.291 9.99278 13.1825C9.88041 12.7971 9.96113 12.3237 10.1949 11.9972C10.2607 11.9054 10.3393 11.8268 10.4964 11.6696C10.9772 11.1889 11.2175 10.9485 11.3746 10.7068C11.9673 9.79537 11.9673 8.62032 11.3747 7.70884C11.2175 7.46715 10.9772 7.2268 10.4964 6.74609L10.2285 6.47814C9.49776 5.74741 9.1324 5.38204 8.74 5.18357C7.9596 4.78885 7.03799 4.78885 6.25759 5.18357C5.86519 5.38204 5.49983 5.74741 4.76909 6.47814L4.55235 6.69489C3.82411 7.42312 3.46 7.78724 3.18191 8.28228C2.87333 8.8316 2.65146 9.68478 2.65333 10.3148C2.65502 10.8826 2.76516 11.2707 2.98545 12.0468C4.16928 16.2177 6.40293 20.1535 9.68641 23.4369C12.9699 26.7204 16.9056 28.9541 21.0765 30.1379C21.8527 30.3582 22.2407 30.4683 22.8085 30.47C23.4386 30.4719 24.2917 30.25 24.8411 29.9414C25.3361 29.6634 25.7002 29.2992 26.4285 28.571L26.6452 28.3543C27.3759 27.6235 27.7413 27.2582 27.9398 26.8658C28.3345 26.0854 28.3345 25.1637 27.9398 24.3834C27.7413 23.991 27.3759 23.6256 26.6452 22.8949L26.3773 22.6269C25.8966 22.1462 25.6562 21.9058 25.4145 21.7487C24.503 21.1561 23.328 21.1561 22.4165 21.7487C22.1748 21.9058 21.9345 22.1462 21.4538 22.6269C21.2966 22.7841 21.218 22.8627 21.1261 22.9285C20.7996 23.1622 20.3263 23.2429 19.9408 23.1306C19.8323 23.0989 19.7466 23.0578 19.5752 22.9755C17.5819 22.0185 15.7138 20.7139 14.0616 19.0617Z"
+                                    stroke="#66803A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+
+                            <span>+40 742 665 665</span>
+                        </div>
+
+                        <span class="contacts__phone_text">
+                            Ca să începem o colaborare, suna pe numarul de telefon
+                        </span>
+                    </div>
+
+                    <div class="contacts__mail_container flex">
+                        <div class="contacts__mail_top flex">
+                            <svg width="33" height="33" viewBox="0 0 33 33" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6.875 19.6437C4.32938 20.7667 2.75 22.3316 2.75 24.0625C2.75 27.4798 8.90608 30.25 16.5 30.25C24.0939 30.25 30.25 27.4798 30.25 24.0625C30.25 22.3316 28.6706 20.7667 26.125 19.6437M24.75 11C24.75 16.5876 18.5625 19.25 16.5 23.375C14.4375 19.25 8.25 16.5876 8.25 11C8.25 6.44365 11.9437 2.75 16.5 2.75C21.0563 2.75 24.75 6.44365 24.75 11ZM17.875 11C17.875 11.7594 17.2594 12.375 16.5 12.375C15.7406 12.375 15.125 11.7594 15.125 11C15.125 10.2406 15.7406 9.625 16.5 9.625C17.2594 9.625 17.875 10.2406 17.875 11Z"
+                                    stroke="#66803A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                            <span class="green-text">România</span>
+                        </div>
+
+                        <span class="contacts__mail_text">
+                            Jud. Brasov, Municipiul Codlea,<br> str. Avicola 45K
+                        </span>
+                    </div>
+
+                    <div class="contacts__social_container flex">
+                        <div class="contacts__social_top flex">
+                            <a href="" class="contacts__social_top_icon">
+                                <svg width="33" height="33" viewBox="0 0 33 33" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.5 30.25C24.0939 30.25 30.25 24.0939 30.25 16.5C30.25 8.90608 24.0939 2.75 16.5 2.75C8.90608 2.75 2.75 8.90608 2.75 16.5C2.75 24.0939 8.90608 30.25 16.5 30.25Z"
+                                        stroke="white" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M13.0625 12.3273C13.0625 11.6711 13.0625 11.3429 13.1996 11.1597C13.3192 11.0001 13.5021 10.9002 13.701 10.886C13.9293 10.8697 14.2053 11.0472 14.7573 11.402L21.2482 15.5747C21.7272 15.8827 21.9667 16.0366 22.0494 16.2324C22.1217 16.4035 22.1217 16.5965 22.0494 16.7676C21.9667 16.9634 21.7272 17.1173 21.2482 17.4253L14.7573 21.598C14.2053 21.9528 13.9293 22.1303 13.701 22.114C13.5021 22.0998 13.3192 21.9999 13.1996 21.8403C13.0625 21.6571 13.0625 21.3289 13.0625 20.6727V12.3273Z"
+                                        stroke="white" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                            </a>
+
+                            <span class="contacts__social_top_text">Video-prezentare</span>
+                        </div>
+
+                        <span class="contacts__social_text">
+                            Video-prezentare cu proiectele executate. <a href="">Merge</a>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="contacts__bottom flex">
+                    <form action="" class="contacts__form flex">
+                        <h3 class="contacts__title">
+                            Îți dorești o casă din catalogul nostru?<br> Lasă-ne contactele și te apelăm!
+                        </h3>
+
+                        <input type="text" name="name" id="name" placeholder="Nume" required />
+                        <input type="text" name="firm" id="surname" placeholder="Prenume" required />
+                        <input type="tel" name="tel" id="tel" placeholder="Telefon de contact" required />
+                        <input type="email" name="email" id="email" placeholder="Posta electronica" required />
+                        <textarea name="question" id="question" placeholder="Mesaj" required /></textarea>
+
+                        <div class="contact__confirm_block flex">
+                            <input type="checkbox" class="confirm" required />
+                            <p>
+                                Prin bifare va dati acordul pentru prelucrarea datelor cu caracter personal
+                            </p>
+                        </div>
+
+                        <input type="submit" class="contacts__submit" value="Trimite">
+                    </form>
+                    <div class="contacts__newsletter">
+                        <img src="img/contacts/contacts-bg.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <div class="container flex">
+            <div class="footer__column flex">
+                <a href="" class="footer__logo">
+                    <img src="img/header/logo.png" alt="">
+                </a>
+
+                <div class="footer__descr">Case din lemn<br> la comandă</div>
+
+                <div class="footer__socials flex">
+                    <a href="" class="footer__soc_icon">
+                        <svg width="39" height="38" viewBox="0 0 39 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.5" y="0.5" width="38" height="37" rx="3.5" stroke="#fff" />
+                            <g clip-path="url(#clip0_245_580)">
+                                <path
+                                    d="M17.3284 21.5187L16.9947 25.9393C17.4721 25.9393 17.6789 25.7462 17.9268 25.5142L20.1651 23.4994L24.8031 26.6985C25.6537 27.145 26.253 26.9099 26.4825 25.9615L29.5268 12.5253L29.5277 12.5245C29.7975 11.3402 29.0729 10.8771 28.2442 11.1676L10.3496 17.6205C9.1283 18.067 9.14679 18.7082 10.142 18.9988L14.7169 20.3391L25.3436 14.0762C25.8437 13.7643 26.2984 13.9369 25.9244 14.2488L17.3284 21.5187Z"
+                                    fill="#fff" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_245_580">
+                                    <rect width="20.1724" height="19" fill="white" transform="translate(9.41382 9.5)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+
+                    <a href="" class="footer__soc_icon">
+                        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M37.5 19C37.5 29.2173 29.2173 37.5 19 37.5C16.5383 37.5 14.19 37.0195 12.0431 36.1475L11.9902 36.126C11.6188 35.9751 11.3723 35.8749 11.1604 35.8274C10.9577 35.782 10.7975 35.7643 10.5897 35.7642C10.3727 35.7642 10.1438 35.8024 9.80566 35.8588L9.76118 35.8662L2.25007 37.1181C1.84749 37.1852 1.57867 37.2295 1.37422 37.2449C1.17213 37.2602 1.09796 37.2405 1.06515 37.2264C0.934146 37.1702 0.829753 37.0659 0.773565 36.9349C0.759493 36.902 0.739808 36.8279 0.755062 36.6258C0.770495 36.4213 0.814812 36.1525 0.881909 35.7499L2.13376 28.2388L2.14116 28.1944C2.1976 27.8562 2.2358 27.6273 2.23577 27.4103C2.23574 27.2025 2.218 27.0423 2.17255 26.8396C2.12507 26.6277 2.0249 26.3812 1.87398 26.0098L1.8525 25.9569C0.980551 23.81 0.5 21.4617 0.5 19C0.5 8.78273 8.78273 0.5 19 0.5C29.2173 0.5 37.5 8.78273 37.5 19Z"
+                                stroke="#fff" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M24.6392 21.0514C25.025 21.2082 27.1642 22.2538 27.6025 22.4629C28.0409 22.672 28.3039 22.7591 28.4266 22.9508C28.5494 23.1425 28.5494 23.9964 28.1811 25.0071C27.8305 26.0178 26.0946 26.9413 25.2529 27.0633C24.4989 27.1679 23.5521 27.2202 22.5175 26.8891C21.8863 26.6974 21.0797 26.436 20.0452 25.9829C15.6967 24.1183 12.8386 19.7618 12.6282 19.4656L12.6247 19.4611C12.4014 19.1653 10.8572 17.1194 10.8572 15.0046C10.8572 12.8786 11.9794 11.833 12.3651 11.3974C12.7684 10.9617 13.2243 10.8572 13.5224 10.8572H14.3641C14.6271 10.8746 14.9953 10.77 15.346 11.6065C15.6967 12.4778 16.5734 14.6038 16.6786 14.8129C16.7838 15.022 16.8539 15.2659 16.7137 15.5622C16.5734 15.841 16.4857 16.0327 16.2753 16.2767C16.0649 16.5206 15.8194 16.8343 15.6265 17.026C15.3986 17.2525 15.1882 17.479 15.4337 17.9147C15.6967 18.3503 16.5559 19.7618 17.8534 20.912C19.5016 22.3757 20.9044 22.8462 21.3427 23.0554C21.7811 23.2819 22.0441 23.247 22.2896 22.9508C22.5351 22.672 23.3592 21.6961 23.6573 21.2605C23.9554 20.8423 24.2359 20.912 24.6392 21.0514Z"
+                                fill="#fff" />
+                        </svg>
+                    </a>
+
+                    <a href="" class="footer__soc_icon">
+                        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.5" y="0.5" width="37" height="37" rx="3.5" stroke="#fff" />
+                            <path
+                                d="M26.9583 18.6725C27.2147 18.8156 27.2147 19.1844 26.9583 19.3275L15.2689 25.8514C15.0189 25.9909 14.7111 25.8102 14.7111 25.5239L14.7111 12.4761C14.7111 12.1898 15.0189 12.0091 15.2689 12.1486L26.9583 18.6725Z"
+                                fill="#fff" stroke="#fff" stroke-width="1.25" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer__column flex">
+                <h5 class="footer__title">Meniu</h5>
+
+                <ul class="footer__menu list-reset flex">
+                    <li class="footer__munu_item">
+                        <a href="">Acasa</a>
+                    </li>
+                    <li class="footer__munu_item">
+                        <a href="">Catalog proiecte</a>
+                    </li>
+                    <li class="footer__munu_item">
+                        <a href="">Servicii</a>
+                    </li>
+                    <li class="footer__munu_item">
+                        <a href="">Finantare</a>
+                    </li>
+                    <li class="footer__munu_item">
+                        <a href="">Case executate</a>
+                    </li>
+                    <li class="footer__munu_item">
+                        <a href="">Despre Noi</a>
+                    </li>
+                    <li class="footer__munu_item">
+                        <a href="">Blog</a>
+                    </li>
+                    <li class="footer__munu_item">
+                        <a href="">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__column flex">
+                <h5 class="footer__title">Servicii</h5>
+
+                <ul class="footer__menu list-reset flex">
+                    <li class="footer__munu_item">
+                        <a href="">Case Tip Ambar</a>
+                    </li>
+                    <li class="footer__munu_item">
+                        <a href="">Case Tip A-frame</a>
+                    </li>
+                    <li class="footer__munu_item">
+                        <a href="">Case din Lemn</a>
+                    </li>
+                    <li class="footer__munu_item">
+                        <a href="">Foisoare si Carport-uri</a>
+                    </li>
+                    <li class="footer__munu_item">
+                        <a href="">Saune modulare</a>
+                    </li>
+                    <li class="footer__munu_item">
+                        <a href="">Despre Noi</a>
+                    </li>
+                    <li class="footer__munu_item">
+                        <a href="">Case Hi-tech</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__column flex">
+                <h5 class="footer__title">Contact</h5>
+
+                <ul class="footer__menu list-reset flex">
+                    <li class="footer__munu_item flex">
+                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M11.1226 4.75004C11.8959 4.90091 12.6065 5.27908 13.1636 5.83616C13.7207 6.39324 14.0989 7.10388 14.2497 7.87712M11.1226 1.58337C12.7292 1.76184 14.2272 2.48126 15.3709 3.62351C16.5146 4.76575 17.2359 6.26292 17.4164 7.86921M8.09608 10.975C7.14484 10.0237 6.39371 8.94813 5.84271 7.80051C5.79532 7.7018 5.77162 7.65245 5.75342 7.58999C5.68872 7.36804 5.73519 7.0955 5.86978 6.90754C5.90766 6.85465 5.9529 6.8094 6.0434 6.7189C6.32017 6.44213 6.45856 6.30374 6.54903 6.16459C6.89024 5.6398 6.89024 4.96325 6.54904 4.43847C6.45856 4.29931 6.32017 4.16092 6.0434 3.88415L5.88913 3.72988C5.4684 3.30915 5.25804 3.09879 5.03212 2.98452C4.5828 2.75725 4.05217 2.75725 3.60285 2.98452C3.37692 3.09879 3.16656 3.30915 2.74584 3.72988L2.62104 3.85467C2.20176 4.27396 1.99212 4.4836 1.832 4.76863C1.65434 5.0849 1.52659 5.57612 1.52767 5.93888C1.52864 6.2658 1.59206 6.48923 1.71889 6.93608C2.40049 9.33752 3.68653 11.6036 5.57702 13.494C7.4675 15.3845 9.73354 16.6706 12.135 17.3522C12.5818 17.479 12.8053 17.5424 13.1322 17.5434C13.4949 17.5445 13.9862 17.4167 14.3024 17.2391C14.5875 17.0789 14.7971 16.8693 15.2164 16.45L15.3412 16.3252C15.7619 15.9045 15.9723 15.6941 16.0865 15.4682C16.3138 15.0189 16.3138 14.4883 16.0865 14.0389C15.9723 13.813 15.7619 13.6027 15.3412 13.1819L15.1869 13.0277C14.9101 12.7509 14.7717 12.6125 14.6326 12.522C14.1078 12.1808 13.4313 12.1808 12.9065 12.522C12.7673 12.6125 12.6289 12.7509 12.3522 13.0277C12.2617 13.1182 12.2164 13.1634 12.1635 13.2013C11.9756 13.3359 11.703 13.3823 11.4811 13.3176C11.4186 13.2994 11.3693 13.2757 11.2705 13.2283C10.1229 12.6773 9.04733 11.9262 8.09608 10.975Z"
+                                stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                        <div class="footer__contact__span">+40 742 665 665</div>
+                    </li>
+
+                    <li class="footer__munu_item flex">
+                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M3.95833 11.3101C2.49267 11.9566 1.58333 12.8576 1.58333 13.8542C1.58333 15.8217 5.12774 17.4167 9.49999 17.4167C13.8722 17.4167 17.4167 15.8217 17.4167 13.8542C17.4167 12.8576 16.5073 11.9566 15.0417 11.3101M14.25 6.33337C14.25 9.55048 10.6875 11.0834 9.49999 13.4584C8.31249 11.0834 4.74999 9.55048 4.74999 6.33337C4.74999 3.71002 6.87664 1.58337 9.49999 1.58337C12.1233 1.58337 14.25 3.71002 14.25 6.33337ZM10.2917 6.33337C10.2917 6.7706 9.93722 7.12504 9.49999 7.12504C9.06277 7.12504 8.70833 6.7706 8.70833 6.33337C8.70833 5.89615 9.06277 5.54171 9.49999 5.54171C9.93722 5.54171 10.2917 5.89615 10.2917 6.33337Z"
+                                stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                        <div class="footer__contact__span">Jud. Brasov, Municipiul Codlea, str. Avicola 45K</div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer__bottom">
+                © MonteVille Estate SRL. Toate drepturile Rezervate. <a href="">Politica de confidentialitate</a>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
