@@ -38,6 +38,31 @@
     font-size: 35px;
 }
 
+.all-photo-controls{
+    margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.photo-pag{
+    display: flex;
+    align-items: center;
+}
+
+.photo-pag .swiper-pagination-bullet{
+    width: 12px;
+    height: 12px;
+    background-color: #000;
+}
+
+.photo-controls{
+    gap: 15px;
+}
+
+.photo-controls div{
+    cursor: pointer;
+}
+
 * {
     box-sizing: border-box;
     font-family: 'Montserrat';
@@ -130,6 +155,7 @@ a li:hover {
 .site-way{
     gap: 10px;
     margin-bottom: 30px;
+    flex-wrap: wrap;
 }
 
 @media screen and (max-width: 1240px) {
