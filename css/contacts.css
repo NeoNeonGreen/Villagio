@@ -131,6 +131,22 @@ textarea {
 }
 
 @media screen and (max-width: 1240px) {
+    .contacts__list{
+        gap: 17px;
+    }
+
+    .contacts__item{
+        width: 100%;
+    }
+
+    .map{
+        width: 100%;
+    }
+
+    .map iframe{
+        width: 100%;
+    }
+
     .contacts__top_content {
         flex-direction: column;
         gap: 17px;
