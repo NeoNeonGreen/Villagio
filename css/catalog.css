@@ -1,4 +1,5 @@
 .filter__top{
+    flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 30px;
 }
@@ -10,7 +11,7 @@
 
 .filter-button {
     border: 2px solid var(--blue);
-    padding: 10px 14px;
+    padding: 10px 13px;
     cursor: pointer;
     display: inline-block;
     outline-offset: -2px;
@@ -70,7 +71,7 @@ select{
 }
 
 .house__img{
-    width: 384px;
+    width: 100%;
     height: 230px;
 }
 
@@ -125,4 +126,31 @@ select{
 
 .green__banner{
     background-color: var(--green);
+}
+
+@media screen and (max-width: 1240px) {
+    .filters__bottom{
+        flex-wrap: wrap;
+        gap: 17px;
+    }
+
+    select{
+        width: 100%;
+    }
+
+    .price__block{
+        margin-top: 20px;
+    }
+
+    .price__block input{
+        width: 49%;
+    }
+
+    .apply{
+        width: 100%;
+    }
+
+    .house{
+        width: 100%;
+    }
 }
