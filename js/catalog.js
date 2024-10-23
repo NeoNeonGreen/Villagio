@@ -38,7 +38,7 @@ function applyFilters() {
         const floors = house.dataset.floors;
         const rooms = house.dataset.rooms;
         const area = house.dataset.area;
-        const price = house.dataset.price;
+        const price = parseInt(house.dataset.price);
 
         // Проверяем только для выбранного типа
         if (selectedType !== 'all' && house.dataset.type !== selectedType) {
