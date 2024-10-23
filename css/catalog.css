@@ -1,0 +1,128 @@
+.filter__top{
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.filter__top div{
+    white-space: nowrap;
+    border-radius: 2px;
+}
+
+.filter-button {
+    border: 2px solid var(--blue);
+    padding: 10px 14px;
+    cursor: pointer;
+    display: inline-block;
+    outline-offset: -2px;
+}
+
+.active {
+    background-color: var(--blue);
+    color: white;
+}
+
+.filter-container {
+    margin-bottom: 35px;
+}
+
+select{
+    position: relative;
+    width: 221px;
+}
+
+.filters__bottom{
+    width: 100%;
+    justify-content: space-between;
+}
+
+.price__block{
+    display: flex;
+    gap: 11px;
+    position: relative;
+}
+
+.price__descr{
+    top: -22px;
+    position: absolute;
+}
+
+.price__block input{
+    width: 156px;
+    height: 49px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    border: none;
+}
+
+.catalog__list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 24px;
+}
+
+.house{
+    position: relative;
+    width: 384px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.house__img{
+    width: 384px;
+    height: 230px;
+}
+
+.house__img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.house__content{
+    padding: 20px;
+    padding-top: 15px;
+    flex-direction: column;
+}
+
+.house__title{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29.26px;
+    margin-bottom: 10px;
+}
+
+.house__price{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24.38px;
+    margin-bottom: 15px;
+}
+
+.house__btn{
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+}
+
+.house__banner{
+    top: 19px;
+    right: 24px;
+    position: absolute;
+    gap: 7px;
+}
+
+.house__banner div{
+   padding: 4px 9px;
+   border-radius: 32px;
+   color: #fff;
+}
+
+.blue__banner{
+    background-color: var(--blue);
+}
+
+.green__banner{
+    background-color: var(--green);
+}
