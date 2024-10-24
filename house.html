@@ -12,37 +12,54 @@
 </head>
 
 <body>
-    <div id="modalInfo" class="modal">
-        <div class="modal-window">
-            <h2 class="section-title modal__title">
-                <span class="blue-text">Solicitati un</span> apel
+    <div id="modalInfo" class="modal-info">
+        <div class="modal-window-info">
+            <h2 class="section-title modal__title-info">
+                <span class="blue-text">Numele casei. Setul 3. «Dacha de iarnă». </span>Descriere tehnică
             </h2>
-            <div class="modal__span">Lasă-ți contactele și managerul nostru te va contacta în scurt timp</div>
-            <form class="form-wrapper" action="">
-                <div class="modal-form flex">
-                    <input class="modal-input" type="text" name="name" placeholder="Nume" required>
-                    <input class="modal-input" type="text" name="phone-number" placeholder="Telefon de contact"
-                        required>
-                </div>
-                <div class="modal__agree flex">
-                    <div class="feedback-form">
-                        <input class="modal-checkbox" type="checkbox" required>
-                    </div>
-                    <span class="modal__agree_span">
-                        Prin bifare va dati acordul pentru prelucrarea datelor cu caracter personal
-                    </span>
-                </div>
-                <input type="submit" class="btn-reset btn modal__submit" value="Trimite" easy-toggle="#modalWin"
-                    easy-class="open">
-            </form>
-            <button easy-toggle="#modalInfo" easy-class="open" easy-rcoe class="close"><svg width="14" height="14"
+
+            <div class="modal__content-info flex">
+                <h5 class="modal__content-info-titile green-text">Titlul secțiunii</h5>
+
+                <ul class="modal__list flex">
+                    <li>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex sapiente cumque soluta, veniam
+                        reprehenderit aut totam dolor praesentium nisi voluptatibus officiis repudiandae incidunt
+                        tenetur error neque vel quod doloremque commodi?
+                    </li>
+                    <li>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex sapiente cumque soluta, veniam
+                        reprehenderit aut totam dolor praesentium nisi voluptatibus officiis repudiandae incidunt
+                        tenetur error neque vel quod doloremque commodi?
+                    </li>
+                    <li>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex sapiente cumque soluta, veniam
+                        reprehenderit aut totam dolor praesentium nisi voluptatibus officiis repudiandae incidunt
+                        tenetur error neque vel quod doloremque commodi?
+                    </li>
+                    <li>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex sapiente cumque soluta, veniam
+                        reprehenderit aut totam dolor praesentium nisi voluptatibus officiis repudiandae incidunt
+                        tenetur error neque vel quod doloremque commodi?
+                    </li>
+                    <li>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex sapiente cumque soluta, veniam
+                        reprehenderit aut totam dolor praesentium nisi voluptatibus officiis repudiandae incidunt
+                        tenetur error neque vel quod doloremque commodi?
+                    </li>
+                </ul>
+
+                
+            </div>
+
+            <button easy-toggle="#modalInfo" easy-class="open" easy-rcoe class="close-info"><svg width="14" height="14"
                     viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M13 1L1 13M1 1L13 13" stroke="#111111" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" />
                 </svg></button>
         </div>
 
-        <div class="overlay" easy-toggle="#modalInfo" easy-class="open"></div>
+        <div class="overlay-info" easy-toggle="#modalInfo" easy-class="open"></div>
     </div>
 
     <main>
@@ -731,7 +748,6 @@
     </main>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/easy-toggler@2.2.7"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> <!-- slider -->
     <script src="js/slider.js"></script> <!-- edit slider -->
     <script src="js/house-switch.js"></script>
